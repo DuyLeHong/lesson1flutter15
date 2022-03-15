@@ -13,9 +13,30 @@ void main() {
   inRaSoDuaVao(int.parse(soCanInRa), mess_prefix);
 
   inRaSoDuaVao(int.parse(soCanInRa2), mess_prefix);
+
+  int? bien1;
+
+  inRaSoDuaVao(bien1, mess_prefix);
+
+  var sPlayerName1 = playerName('Long');
+  print(sPlayerName1);
+
+  var sPlayerName2 = playerName(null);
+  print(sPlayerName2);
 }
 
-int inRaSoDuaVao(int aNumber, String prefix) {
+String playerName(String? name) {
+  String _playerName = name ?? 'Guest';
+
+  return _playerName;
+}
+
+
+int? inRaSoDuaVao(int? aNumber, String prefix) {
+  if (aNumber == null) {
+    return null;
+  }
+
   print('$prefix ${aNumber + 10}.'); // Print to console.
 
   return 0;
