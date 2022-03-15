@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'CodeFresher - Flutter 15'),
+      home: const MyHomePage(title: 'CF - Flutter 15 - Bai 1'),
     );
   }
   
