@@ -71,12 +71,34 @@ void main() {
     18: 'argon',
   };
 
+  //var nobleGases2 = Map<int, String>();
+
   nobleGases[60] = 'cu';
   nobleGases[60] = 'cu - dong';
   nobleGases.remove(2);
 
   print('Maps nobleGases: $nobleGases');
 
+  //list examples part 2:
+  List<int> list = const [1, 2, 3];
+  //list[0] = -1;
+
+  print('Gia tri phan tu dau tien cua const list la: ${list.elementAt(0)}');
+
+  final String newMess = StudentModel.KEY_NAME;
+
+  print ('Key name cua StudentModel la: $newMess');
+  //newMess = 'Thong bao moi la abc';
+
+  doSomeThing("Noi dung truyen vao", 1, printMessage);
+}
+
+void printMessage (String mess, int bien2) {
+  print(mess);
+}
+
+void doSomeThing(String message, int flags, Function function) {
+  function.call('Function call: $message $flags', flags);
 }
 
 

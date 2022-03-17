@@ -6,6 +6,8 @@ class StudentModel {
   late String _sClass;
   var _isK56;
 
+  static const String KEY_NAME = 'key_name';
+
   StudentModel(this._sName, this._age, this._sClass, this._isK56);
 
   void displayStudentInfo (dynamic studenInfo) {
