@@ -1,5 +1,3 @@
-
-
 import 'package:lesson1/student_model.dart';
 
 void main() {
@@ -21,7 +19,14 @@ void main() {
   names.addAll(['Seth', 'Kathy', 'Lars', 'Leona']);
   //names.add(42.toString());
 
-  var ages = <dynamic>[42, 45, 47, 50 , 'CodeFresher', StudentModel('_sName', 11, 'CNTT2', false)];
+  var ages = <dynamic>[
+    42,
+    45,
+    47,
+    50,
+    'CodeFresher',
+    StudentModel('_sName', 11, 'CNTT2', false)
+  ];
   ages.add(60);
   ages.removeAt(0);
 
@@ -35,13 +40,19 @@ void main() {
   print('Names: ${names.toString()} - Ages: ${ages.toString()}');
 
   // sets example:
-  var halogens = <String>{'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
+  var halogens = <String>{
+    'fluorine',
+    'chlorine',
+    'bromine',
+    'iodine',
+    'astatine'
+  };
   halogens.add('clore');
   halogens.add('fluorine');
 
   print('Halogens set: $halogens');
 
-  var setInts = <int> {};
+  var setInts = <int>{};
 
   setInts.add(1);
   setInts.add(3);
@@ -53,8 +64,6 @@ void main() {
   setInts.remove(3);
 
   print('Set Ints: $setInts');
-
-
 
   //maps example
 
@@ -87,19 +96,35 @@ void main() {
 
   final String newMess = StudentModel.KEY_NAME;
 
-  print ('Key name cua StudentModel la: $newMess');
+  print('Key name cua StudentModel la: $newMess');
   //newMess = 'Thong bao moi la abc';
 
   doSomeThing("Noi dung truyen vao", 1, printMessage);
 
   const list2 = ['apples', 'bananas', 'oranges'];
 
-  var list3 = ['grapes', ...list2, 'potato'];
+  var list3 = ['grapes', ...list2, 'potato', ''];
 
   print('Gia tri list 3 la: $list3');
+
+  bool hasEmpty = list3.any(checkStringIsEmpty);
+
+  String res1 = list3.firstWhere(checkStringIsNotEmpty);
+
+  print('Phan tu dau tien khong bi empty trong list 3 la: $res1');
+
+  print('list 3 co phan tu bi rong: $hasEmpty');
 }
 
-void printMessage (String mess, int bien2) {
+bool checkStringIsNotEmpty(String content) {
+  return !content.isEmpty;
+}
+
+bool checkStringIsEmpty(String content) {
+  return content.isEmpty;
+}
+
+int printMessage(String mess, int bien2) {
   print(mess);
 
   void myFunction() {
@@ -107,22 +132,22 @@ void printMessage (String mess, int bien2) {
 
     void nestedFunction() {
       var insideNestedFunction = true;
-
     }
 
     nestedFunction();
   }
 
   myFunction();
+
+  return 0;
 }
 
-void doSomeThing(String message, int flags, Function function) {
+void doSomeThing(String message, int flags, int Function (String, int) function) {
   function.call('Function call: $message $flags', flags);
 }
 
-
-
-enableFlags(String sCountry, bool isBigSize, {bold: true, hidden: false, required prefix }) {
+enableFlags(String sCountry, bool isBigSize,
+    {bold: true, hidden: false, required prefix}) {
   print('$prefix $sCountry , bold: $bold , hidden: $hidden');
 }
 
@@ -133,7 +158,3 @@ String say(String from, String msg, dynamic mess, [String device = 'Android']) {
   }
   return result;
 }
-
-
-
-
