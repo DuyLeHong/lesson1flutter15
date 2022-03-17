@@ -13,10 +13,21 @@ void main() {
 
   enableFlags('Viet Nam', true, bold: false, prefix: 'The result is: ');
 
+  var res = say('CodeFresher', 'Noi dung', 'iOS');
+
+  print(res);
 }
 
-enableFlags(String sCountry, bool isBigSize, {bold: true, hidden: false, prefix : 'In ra ket qua: '}) {
+enableFlags(String sCountry, bool isBigSize, {bold: true, hidden: false, required prefix }) {
   print('$prefix $sCountry , bold: $bold , hidden: $hidden');
+}
+
+String say(String from, String msg, [String device = 'Android']) {
+  var result = '$from says $msg';
+  if (device != null) {
+    result = '$result with a $device';
+  }
+  return result;
 }
 
 
