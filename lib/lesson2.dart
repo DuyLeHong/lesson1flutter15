@@ -91,10 +91,29 @@ void main() {
   //newMess = 'Thong bao moi la abc';
 
   doSomeThing("Noi dung truyen vao", 1, printMessage);
+
+  const list2 = ['apples', 'bananas', 'oranges'];
+
+  var list3 = ['grapes', ...list2, 'potato'];
+
+  print('Gia tri list 3 la: $list3');
 }
 
 void printMessage (String mess, int bien2) {
   print(mess);
+
+  void myFunction() {
+    var insideFunction = true;
+
+    void nestedFunction() {
+      var insideNestedFunction = true;
+
+    }
+
+    nestedFunction();
+  }
+
+  myFunction();
 }
 
 void doSomeThing(String message, int flags, Function function) {
