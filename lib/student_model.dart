@@ -8,6 +8,13 @@ class StudentModel {
 
   StudentModel(this._sName, this._age, this._sClass, this._isK56);
 
+  void displayStudentInfo (dynamic studenInfo) {
+    String mess = (studenInfo as StudentModel).toString();
+
+    print('Display student info: $mess');
+
+  }
+
   // StudentModel (String name, int age, String sClass, bool isK56) {
   //   this._sName = name;
   //   this._age = age;
