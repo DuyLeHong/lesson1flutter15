@@ -17,7 +17,7 @@ void main() {
 
   print(res);
 
-  var names = <String>[];
+  var names = <String>{};
   names.addAll(['Seth', 'Kathy', 'Lars', 'Leona']);
   //names.add(42.toString());
 
@@ -33,6 +33,50 @@ void main() {
   bienA.displayStudentInfo(StudentModel('_sName', 11, 'CNTT2', false));
 
   print('Names: ${names.toString()} - Ages: ${ages.toString()}');
+
+  // sets example:
+  var halogens = <String>{'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
+  halogens.add('clore');
+  halogens.add('fluorine');
+
+  print('Halogens set: $halogens');
+
+  var setInts = <int> {};
+
+  setInts.add(1);
+  setInts.add(3);
+  setInts.add(5);
+  setInts.add(7);
+  setInts.add(9);
+  setInts.add(11);
+
+  setInts.remove(3);
+
+  print('Set Ints: $setInts');
+
+
+
+  //maps example
+
+  var gifts = <String, String>{
+    // Key:    Value
+    'first': 'partridge',
+    'second': 'turtledoves',
+    'fifth': 'golden rings'
+  };
+
+  var nobleGases = <int, String>{
+    2: 'helium',
+    10: 'neon',
+    18: 'argon',
+  };
+
+  nobleGases[60] = 'cu';
+  nobleGases[60] = 'cu - dong';
+  nobleGases.remove(2);
+
+  print('Maps nobleGases: $nobleGases');
+
 }
 
 
